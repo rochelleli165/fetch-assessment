@@ -1,0 +1,43 @@
+1. This was a simple coding project which called for simple coding resources.
+As a result, I settled with python because of its readability, easiness to edit
+csv files (pandas), and because it has Flask, a python backend that makes coding requests
+very intuitive and simple. I've used Flask and pandas many times in the past so familarity
+was also a reason. I chose to write into the csv file as a "database" so the data
+stays even if the server crashes.
+
+2. One advantage is that the code is simple and small. It does the bare minimum of the
+requirements, and the server is easy to start up. It saves time and cost. The environment 
+is simple and reliable. One of the major disadvantages is that querying data is slow if 
+implemented in a larger scale. In each function I pull up the whole dataframe, which 
+could be bigger in the future. If this was in a SQL server, you could perform other 
+complicated queries that pandas and python cannot. There's also no recoverability. 
+But hey, simple programs for simple tasks :D
+
+3. My most favorite personal project is actually my most recent one. I was tired of going
+on every grocery website and searching up their weekly ads. I was tired of wondering 
+what I can do with leftover ingredients. I decided that I would let optimization control
+what I eat.
+I first made a web scraper that scrapes recipes and grocery flyers. Then I can "subscribe" 
+to a grocery and receive weekly updates.
+
+Using Gurobi, an optimization solver, I also maximized the number of recipes I can make 
+with the ingredients I have plus the ingredients I could potentially buy. The app was 
+written in Flutter and the backend was, you guessed it, Flask + Gurobi.
+
+The fun part was figuring out the optimization (It's a biparte MILP problem!) but the 
+challenging parts were normalizing all the recipe and grocery items to standarized ingredient
+names. For example, Diamond Kosher Salt translates to just salt. Fresh California Grapes 
+turns to just grapes. It's a pain to manually do this, so I shoved this work to Google 
+Gemini (their API is free, yipee!) to translate all of the items.
+
+Another big challenge I'm facing right now is normalizing units. For
+example, some recipes called for 2 carrots while other call for 2 pounds of carrots, while
+others cal for 2  cups of carrots. I'm still thinking of a solution, and I'm not AI can solve
+this problem. For now I have the units be how many times you want to use the ingredient in 
+a recipe.
+
+So far, the basic functionality works! Check it out on GitHub. I'm no UI/UX designer, so the
+app looks ugly, but I'm proud of involving a current problem I have in life and trying to 
+solve it. 
+
+Thanks for reading all this :D
